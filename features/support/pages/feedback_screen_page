@@ -1,0 +1,21 @@
+# PageObject for working with opened feedback screen
+class FeedbackPage < BasePage
+  include Utils
+  expected_element :file_name
+  element :file_name, :id, 'spinner_title'
+  element :toolbar_save, :id, 'iv_menu_save_toolbar'
+  # element :file_icon, :xpath, "//#{IMAGE_VIEW}[@resource-id=\"#{PACKAGE}:id/file_icon\"]"
+  # rename file_icon wirh navigation_icon with new locator
+  element :navigation_icon, :xpath, "//#{IMAGE_BUTTON}[@content-desc=\"Navigation up\"]"
+  element :unconverted_file_name, :xpath, "//#{TEXT_VIEW}[@resource-id=\"#{PACKAGE}:id/title\"]"
+  element :toolbar, :xpath, "//*[@resource-id=\"#{PACKAGE}:id/toolbar\"]"
+  element :document, :xpath, "//#{FRAME_LAYOUT}[@resource-id=\"#{PACKAGE}:id/root\"]"
+  element :page_numerator, :xpath, "//#{LINEAR_LAYOUT}[@resource-id=\"#{PACKAGE}:id/page_numerator\"]"
+  element :document_editor_layout, :id, 'editorLayout'
+  element :back_button, :xpath, "//*[@resource-id=\"#{PACKAGE}:id/toolbar\"]/#{IMAGE_BUTTON}"
+  element :document_page, :id, 'collaborationLayout'
+  element :undo_button, :id, 'mi_undo'
+  element :redo_button, :id, 'mi_redo'
+  element :toolbar_more_options, :id, 'mi_overflow'
+  element :insert_link, :id, 'insert_link'
+  element :add_items, :id, 'mi_add'
