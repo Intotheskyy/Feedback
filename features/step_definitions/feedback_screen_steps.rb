@@ -10,5 +10,6 @@ sleep 1
 end
 
 Then(/^I see Feedback screen$/) do
-  pending
+  find_element(:id, 'checkbox_system_logs')
+  raise 'Checkbox is not checked' if find_element(:id, 'checkbox_system_logs').attribute('checked') == 'false'
 end

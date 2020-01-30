@@ -1,4 +1,5 @@
 require "appium_lib"
+require "selenium-webdriver"
 
 def caps
   {caps: {
