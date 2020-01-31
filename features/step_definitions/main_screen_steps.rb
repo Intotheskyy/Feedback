@@ -8,7 +8,7 @@ sleep 1
 end
 
 When(/^I tap context menu screen$/) do
-  find_element(:accessibility_id, 'Ещё').click
+  find_element(:accessibility_id, 'More options').click
 end
 Then(/^I should see Feedback button$/) do
 sleep 1
